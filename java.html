@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Java Script</title>
+</head>
+<body>
+   <h1 id="JavaScript">Learning Java Script</h1>
+   <button onclick="updateTitle()">Click Me</button>
+   <button onclick="changeTextColor()">Change Text Color</button>
+
+    <script>
+       //function to update the title of the page
+       function updateTitle() {
+            document.getElementById("JavaScript").innerHTML = "Learning Java Script is Awesome!";
+        }
+        function changeTextColor() {
+            const heading = document.getElementById("JavaScript");
+            heading.style.color = "blue";
+        }
+       //let for varibles that change
+        let age = 25;
+        age = 26;
+        //const for variables that don't change
+        const pi = 3.14;
+        //to display prompt dialog box
+        let name = prompt("What is your name?");
+        //output to console:
+        console.log("Hello " + name + "!");
+
+        if (true) {
+            console.log("this is true");
+        }
+
+    </script>
+
+    <div id="output">What is your name?</div>
+    <input type="text" id="inputField" placeholder="Enter your name">
+    <button onclick="updateText()">Submit</button>
+    <script>
+        function updateText() {
+            const newText = document.getElementById("inputField").value;
+            let result = "<h1>Your name is " + newText + "</h1>";
+            document.getElementById('output').innerHTML = result;
+        }
+    </script>
+
+    <div id="output2">What is your favorite color?</div>
+    <input type="text" id="inputField2" placeholder="Enter your favorite color">
+    <button onclick="updateText2()">Submit</button>
+    <script>
+        function updateText2() {
+            let yourColor = document.getElementById("inputField2").value;
+            let composedText = "<h1>Your favorite color is " + yourColor + "</h1>";
+            document.getElementById('output2').innerHTML = composedText;
+        }
+    </script>
+
+</body>
+</html>
